@@ -567,8 +567,7 @@ color: #FF0000;
 }
 
 .bloco5{
-
-box-sizing: border-box;
+    box-sizing: border-box;
 
 position: absolute;
 width: 500px;
@@ -581,14 +580,11 @@ border: 2px solid #000000;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .bloco6{
+    box-sizing: border-box;
 
-left: 109px;
-top: 896px;
-
-background: #FFFFFF;
-border: 2px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+position: absolute;
+width: 500px;
+height: 225px;
 left: 772px;
 top: 896px;
 
@@ -1124,32 +1120,4 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .carrinho1:active, .carrinho3:active, .carrinho2:active, .carrinho4:active, .carrinho5:active, .carrinho6:active, .carrinho7:active, .carrinho8:active {
     box-shadow: inset -5px -5px 7px rgba(255, 255, 255, .6),
                 inset 5px 5px 5px rgba(0, 0, 0, .6);
-
-}
-input[type='radio']:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: white;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 1px solid rgb(0, 0, 0);
-}
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #ff0000;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 1px solid rgb(0, 0, 0);
-
 }
