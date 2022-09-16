@@ -12,11 +12,21 @@
 </head>
 
 <body>
+    <script src="/js.js"></script>
 
     <head>
-        <img src="img/carrinho.png" alt="imagen ilustrativa" class="carrinho">
+
+
+        <a href="/carrinho.html">
+            <button type="button" class="carrinho">
+                <img src="img/carrinho.png" alt="imagem ilustrativa" class="carrinho-img">
+            </button>
+        </a>
+   
         <img src="img/frase-cardapio.png" alt="imagen ilustrativa" class="cardapio">
         <p class="meu-carrinho">meu carrinho</p>
+        <div id="totalDeItens">0</div>
+        <div id="doublechiquem"></div>
 
         <div class="comidas"> Comidas</div>
         </header>
@@ -34,7 +44,7 @@
 
 
             </div>
-            <input  class="favorite styled carrinho1 fonte-carrinho"  type="button"  value="ADCIONAR AO CARRINHO">
+            <button  class="carrinho1 fonte-carrinho"  type="button" onclick="adicionaItem('Double Chicken');">ADICIONAR AO CARRINHO</button>
            
 
 
@@ -49,7 +59,7 @@
             <div class="titulo2"> PICANHA ESPECIAL </div>
             <p class="descriçao2"> Picanha, cebola, cheddar, salada, bacon e pão de queijo. </p>
             <div class="preço2">R$ 22,00</div>
-            <input  class="favorite styled carrinho2 fonte-carrinho2"  type="button"  value="ADCIONAR AO CARRINHO">
+            <button  class="favorite styled carrinho2 fonte-carrinho2"  type="button" onclick="adicionaItem('Picanha Especial');">ADICIONAR AO CARRINHO</button>
 
             <div class="bloco3">
                 <img src="img/ham3.png" alt="Foto da comida" class="img-comida1">
@@ -57,7 +67,7 @@
             <div class="titulo3"> DOUBLE VEGAN </div>
             <p class="descriçao3"> Hamburguer de feijão, salada, cheddar sem leite, molho especial e pão de batata. </p>
             <div class="preço3">R$ 18,00</div>
-            <input  class="favorite styled carrinho3 fonte-carrinho3"  type="button"  value="ADCIONAR AO CARRINHO">
+            <button  class="favorite styled carrinho3 fonte-carrinho3"  type="button"  onclick="adicionaItem('Double Vegan');">ADICIONAR AO CARRINHO</button>
 
             <div class="bloco4">
                 <img src="img/batata.png" alt="Foto da comida" class="img-comida1">
@@ -68,7 +78,7 @@
 
             </div>
             <div class="preço4">R$ 18,00</div>
-            <input  class="favorite styled carrinho4 fonte-carrinho4"  type="button"  value="ADCIONAR AO CARRINHO">
+            <button  class="favorite styled carrinho4 fonte-carrinho4"  type="button"  onclick="adicionaItem('Batata Frita');">ADICIONAR AO CARRINHO</button>
   
         
             <div class="descriçao4 lista">
@@ -178,6 +188,11 @@
 
 
         </section>
+       
+
+
+        </script>
+        
 
 
 
