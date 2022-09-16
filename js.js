@@ -36,16 +36,25 @@ const carrinhoDeCompras  = {
 let totalDeItens = 0;
 
 let doublechiquem = " ";
+let picanhaespecial = " ";
 function adicionaItem(item){
     carrinhoDeCompras[item].quantidade += 1;
     totalDeItens += 1;
     document.getElementById("totalDeItens").innerText = totalDeItens;
     console.log(carrinhoDeCompras);
-    if(carrinhoDeCompras[item].quantidade > 0){
+    if(carrinhoDeCompras["Double Chicken"].quantidade > 0){
     
-        doublechiquem = "Double Chicken";
+        doublechiquem = "  Double Chicken";
         document.getElementById("doublechiquem").innerText = doublechiquem;
-        console.log(doublechiquem);}
+        console.log(doublechiquem);
+    }
+
+    if(carrinhoDeCompras["Picanha Especial"].quantidade > 0){
+    
+            picanhaespecial = "Picanha Especial";
+            document.getElementById("picanhaespecial").innerText = picanhaespecial;
+            console.log(picanhaespecial);
+        }
 
 }
 
@@ -55,12 +64,13 @@ function removeItem(item){
     document.getElementById("totalDeItens").innerText = totalDeItens;
     console.log(carrinhoDeCompras);
 }
-
+/*
 function adicionaDoubleChiquem(item){
-    if(carrinhoDeCompras[item].quantidade > 0){
+    if(carrinhoDeCompras["Double Chicken"].quantidade > 0){
     
     doublechiquem = "Double Chicken";
     document.getElementById("doublechiquem").innerText = doublechiquem;
     console.log(doublechiquem);}
 
 }
+*/

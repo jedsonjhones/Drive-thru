@@ -1403,3 +1403,32 @@ color: #000000;
     
     color: #000000;
 }
+.bol{
+    position: absolute;
+width: 25px;
+height: 25px;
+left: 102px;
+top: 89px;
+border-radius: 30px;
+
+background: #FF0000;
+}
+.bol2{
+    position: absolute;
+width: 19px;
+height: 5px;
+left: 109px;
+top: 99px;
+
+font-family: 'Charm';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 31px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+}
