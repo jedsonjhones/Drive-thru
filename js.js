@@ -1,7 +1,9 @@
 function abrir(){
     document.getElementById('popup-carrinho').style.visibility = 'visible';
 }
-
+function fechar(){
+    document.getElementById('popup-carrinho').style.visibility = 'hidden';
+}
 const carrinhoDeCompras  = {
     "Double Chicken": {
         "quantidade": 0,
