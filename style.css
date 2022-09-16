@@ -19,19 +19,21 @@ top: 34px;
 }
 .carrinho-img{
     
-position: absolute;
-    
+    box-sizing: border-box;
 
 
-
+width: 75px;
+height: 75px;
+left: 33px;
+top: 20px;
 
 background: #FFFFFF;
 border: 3px ;
 border-radius: 15px;
 width: 50px;
 height: 50px;
-left: 7px;
-top: 6px;
+left: 44px;
+top: 34px;
 
 }
 .meu-carrinho{
@@ -1165,14 +1167,14 @@ input[type='radio']:checked:after {
     border: 1px solid rgb(0, 0, 0);
 }
 .popup-carrinho{
-    background: #D9D9D9;
-
+    background-image: url(/img/branco.jpg);
+visibility: hidden;
 position: relative;
 width: 1366px;
 height: 768px;
 
-background: linear-gradient(59.8deg, rgba(239, 181, 28, 0.96) 20.21%, rgba(248, 237, 219, 0.663783) 55.39%, #FF0000 85.78%);
-/* visibility: hidden; */
+background: linear-gradient(59.8deg, rgba(239, 181, 28, 0.96) 20.21%, rgba(248, 237, 219, 0.663783) 55.39%, #FF0000 85.78%)  ;
+
 }
 .carrinho-img2{
     position: absolute;
@@ -1326,22 +1328,25 @@ color: #000000;
     box-sizing: border-box;
 
 position: absolute;
-width: 80px;
-height: 50px;
-left: 47px;
-top: 19px;
+width: 90px;
+height: 90px;
+left: 33px;
+top: 20px;
 
 background: #FFFFFF;
-border: 2px solid #000000;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border: 3px solid #000000;
 border-radius: 15px;
+width: 70px;
+height: 70px;
+left: 44px;
+top: 34px;
 }
 .volta{
     position: absolute;
 width: 61px;
 height: 11px;
-left: 58px;
-top: 53px;
+left: 2px;
+top: 50px;
 
 font-family: 'Sedan';
 font-style: normal;
@@ -1357,10 +1362,10 @@ color: #000000;
 
 .img-voltar{
     position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 23px;
-    top: 8px;
+    width: 40px;
+    height: 40px;
+    left: 13px;
+    top: 6px;
     border-radius: 10px;
 }
 .totalpedido{

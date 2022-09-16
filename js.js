@@ -1,3 +1,7 @@
+function abrir(){
+    document.getElementById('popup-carrinho').style.visibility = 'visible';
+}
+
 const carrinhoDeCompras  = {
     "Double Chicken": {
         "quantidade": 0,
@@ -28,10 +32,6 @@ const carrinhoDeCompras  = {
 };
 
 let totalDeItens = 0;
-
-function abrir(){
-    document.getElementById('popup-carrinho').style.visibility = 'visible';
-}
 
 let doublechiquem = " ";
 function adicionaItem(item){
