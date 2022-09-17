@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <script src="/js.js"></script>
+  
 
     <head>
         
@@ -66,7 +66,7 @@
             <div class="titulo3"> DOUBLE VEGAN </div>
             <p class="descriçao3"> Hamburguer de feijão, salada, cheddar sem leite, molho especial e pão de batata. </p>
             <div class="preço3">R$ 18,00</div>
-            <button  class="favorite styled carrinho3 fonte-carrinho3"  type="button"  onclick="adicionaItem('Double Vegan');">ADICIONAR AO CARRINHO</button>
+            <button  class="favorite styled carrinho3 fonte-carrinho3"  type="button"  onclick="adicionaItem('Double vegan');">ADICIONAR AO CARRINHO</button>
 
 
             <div class="bloco4">
@@ -78,7 +78,8 @@
 
             </div>
             <div class="preço4">R$ 18,00</div>
-            <input  class="favorite styled carrinho4 fonte-carrinho4"  type="button"  value="ADCIONAR AO CARRINHO">
+    
+            <button  class="favorite styled carrinho4 fonte-carrinho4"  type="button"  onclick="adicionaItem('Batata Frita');">ADICIONAR AO CARRINHO</button>
   
         
             <div class="descriçao4 lista">
@@ -101,9 +102,11 @@
 
 
             </div>
-            <img src="img/refrigetante.png" alt="imagen ilustrativa" class="refrigerante">
+            <img src="img/refrigetante.png" alt="imagen ilustrativa" class="refrigerantepos">
             <div class="titulo5">REFRIGERANTE</div>
-            <input  class="favorite styled carrinho5 fonte-carrinho5"  type="button"  value="ADCIONAR AO CARRINHO">
+          
+            <button  class="favorite styled carrinho5 fonte-carrinho5"  type="button"  onclick="adicionaItem('Refrigerante');">ADICIONAR AO CARRINHO</button>
+
 
 
             <div class="circulo1-2"></div>
@@ -130,7 +133,9 @@
             </div>
             <img src="img/milk.png" alt="imagen ilustrativa" class="img-milk">
             <div class="titulo6">MILK-SHAKE</div>
-            <input  class="favorite styled carrinho6 fonte-carrinho6"  type="button"  value="ADCIONAR AO CARRINHO">
+            <button  class="favorite styled carrinho6 fonte-carrinho6"  type="button"  onclick="adicionaItem('Milkshake');">ADICIONAR AO CARRINHO</button>
+
+
 
             <div class="preço6">R$ 11,00</div>
             <div class="descriçao6 lista">
@@ -150,7 +155,8 @@
             </div>
             <img src="img/energetico.png" alt="imagen ilustrativa" class="img-energ">
             <div class="titulo7">ENERGETICO</div>
-            <input  class="favorite styled carrinho7 fonte-carrinho7"  type="button"  value="ADCIONAR AO CARRINHO">
+            <button  class="favorite styled carrinho7 fonte-carrinho7"  type="button"  onclick="adicionaItem('Energetico');">ADICIONAR AO CARRINHO</button>
+
             <div class="descriçao7 lista">
                 <label for="Red Bull">Red Bull </label><br />
                 <label for="Fusion">Fusion</label><br />
@@ -173,7 +179,7 @@
             </div>
             <img src="img/agua.png" alt="imagen ilustrativa" class="img-agua">
             <div class="titulo8">Água Mineral</div>
-            <input  class="favorite styled carrinho8 fonte-carrinho8"  type="button"  value="ADCIONAR AO CARRINHO">
+            <button  class="favorite styled carrinho8 fonte-carrinho8"  type="button"  onclick="adicionaItem('Agua');">ADICIONAR AO CARRINHO</button>
 
             <div class="descriçao8 lista">
                 <label for="Indaiá">Indaiá </label>
@@ -184,29 +190,56 @@
 
 
 
-            <div class="preço8">R$ 8,00</div>
+            <div class="preço8">R$ 30,00</div>
 
 
         </section>
        
         <div id="popup-carrinho" class="popup-carrinho">
             <img src="img/carrinho2.png" alt="imagen ilustrativa" class="carrinho-img2">
-            <span class="bloco-carrinho">  </span>
-            <span class="bloco-carrinho1">Teste 1</span>
-            <span class="bloco-carrinho2">
-          
+            <div class="bloco-carrinho direction" > 
+                 <div class="around" id="doublechiquem"></div>
+                 <div class="around" id="picanhaespecial"></div>
+                 <div class="around" id="doublevegan" ></div>
+                 <div class="around" id="batatafrita" ></div>
+                 <div class="around" id="refrigerante" ></div>
+                 <div class="around" id="milk" ></div>
+                 <div class="around" id="energe" ></div>
+                 <div class="around" id="agua" ></div>
 
-            </span>
-            <span class="bloco-carrinho3">teste 3</span>
-            <span class="botao-finalizar">Fechar</span>
+                 
+                 
+            </div>
+
+
+
+
+            <span class="bloco-carrinho1"></span>
+            <div class="bloco-carrinho2 direction">
+                <div class="around2" id="valordoublechiquem"></div> 
+                <div class="around2" id="valorpicanha"></div>
+                <div class="around2" id="valorvegan"></div>
+                <div class="around2" id="valorbatata"></div>
+                <div class="around2" id="valorrefri"></div>
+                <div class="around2 " id="valormilk"></div>
+                <div class="around2" id="valorenerge"></div>
+                <div class="around2" id="valoragua"></div>
+            </div>
+            <span class="bloco-carrinho3" ></span>
+            <span class="listagem">LISTAGEM</span>
+            <span class="quant">QNTD</span>
+            <span class="val">VALOR</span>
+            <span class="botao-finalizar"></span>
             <span class="finalizar">Finalizar Compra</span>
             <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img">
             <span class="total">Total do pedido: </span>
+            <div class="toti">R$</div>
+            <div class="tot" id="valortot">0</div>
        
-            <div class="L1" id="doublechiquem"   >          </div>
+         
            
             
-            <div class="L2" id="picanhaespecial" > </div>>
+            
             
             <a href="javascript: abrir()"><button type="button" class="carrinho"><img src="img/carrinho.png" alt="imagen ilustrativa" class="carrinho-img">
 
@@ -230,6 +263,7 @@
 
 
         </div>
+        <script src="./js.js"></script>
         
         
 
