@@ -1136,10 +1136,13 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #ffd82a;
 }
 
-.carrinho1:active,.img-voltar:active, .voltar:active, .carrinho-img:active, .carrinho:active, .carrinho3:active, .carrinho2:active, .carrinho4:active, .carrinho5:active, .carrinho6:active, .carrinho7:active, .carrinho8:active {
+.carrinho1:active, .botao-finalizar:active, .img-voltar:active, .voltar:active, .carrinho-img:active, .carrinho:active, .carrinho3:active, .carrinho2:active, .carrinho4:active, .carrinho5:active, .carrinho6:active, .carrinho7:active, .carrinho8:active {
     box-shadow: inset -5px -5px 7px rgba(255, 255, 255, .6),
                 inset 5px 5px 5px rgba(0, 0, 0, .6);
 }
+
+
+
 input[type='radio']:after {
     width: 15px;
     height: 15px;
@@ -1280,10 +1283,11 @@ display: flex;
     border: 2px solid #000000;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+    z-index: 0;
 }
 .finalizar{
     position: absolute;
-width: 361px;
+
 height: 89px;
 left: 980px;
 top: 633px;
@@ -1297,7 +1301,7 @@ display: flex;
 align-items: center;
 
 color: #FFFFFF;
-
+z-index: 1;
 }
 .finalizar-img{
     position: absolute;
@@ -1305,6 +1309,7 @@ width: 69px;
 height: 55px;
 left: 1237px;
 top: 653px;
+z-index: 1;
 }
 .total{
     position: absolute;
