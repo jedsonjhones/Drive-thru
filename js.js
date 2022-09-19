@@ -25,9 +25,9 @@ const carrinhoDeCompras  = {
         "total": "R$ 0,00",
         "descrição": "Filé de frango 2x, cheddar 2x, cebola agridoce, molho especial, e pão de milho",
     },
-    "Batata Frita": {
+    "Batata Frita-Pequena": {
         "quantidade": 0,
-        "valor": 10,
+        "valor": 7,
         "total": "R$ 0,00",
         "descrição": "Filé de frango 2x, cheddar 2x, cebola agridoce, molho especial, e pão de milho",
     },
@@ -54,6 +54,18 @@ const carrinhoDeCompras  = {
         "valor": 30,
         "total": "R$ 0,00",
         "descrição": "Energetico",
+    },
+    "Batata Frita-Media": {
+        "quantidade": 0,
+        "valor": 10,
+        "total": "R$ 0,00",
+        "descrição": "Filé de frango 2x, cheddar 2x, cebola agridoce, molho especial, e pão de milho",
+    },
+    "Batata Frita-Grande": {
+        "quantidade": 0,
+        "valor": 15,
+        "total": "R$ 0,00",
+        "descrição": "Filé de frango 2x, cheddar 2x, cebola agridoce, molho especial, e pão de milho",
     },
 };
 
@@ -108,16 +120,42 @@ function adicionaItem(item){
             document.getElementById("valorvegan").innerText = valorvegan;
             console.log(valorvegan);
         }
-        if(carrinhoDeCompras["Batata Frita"].quantidade > 0){
+        if(carrinhoDeCompras["Batata Frita-Pequena"].quantidade > 0){
     
-            batatafrita = "Batata Frita";
+            batatafrita = "Batata Frita-Pequena";
             document.getElementById("batatafrita").innerText = batatafrita;
             console.log(batatafrita);
 
-            valorbatata = carrinhoDeCompras["Batata Frita"].quantidade * carrinhoDeCompras["Batata Frita"].valor ;
+            valorbatata = carrinhoDeCompras["Batata Frita-Pequena"].quantidade * carrinhoDeCompras["Batata Frita-Pequena"].valor ;
             document.getElementById("valorbatata").innerText = valorbatata;
             console.log(valorbatata);
         }
+        if(carrinhoDeCompras["Batata Frita-Media"].quantidade > 0){
+    
+            batatamedia = "Batata Frita-Media";
+            document.getElementById("batatamedia").innerText = batatamedia;
+            console.log(batatamedia);
+
+            valorbatatamedia = carrinhoDeCompras["Batata Frita-Media"].quantidade * carrinhoDeCompras["Batata Frita-Media"].valor ;
+            document.getElementById("valorbatatamedia").innerText = valorbatatamedia;
+            console.log(valorbatatamedia);
+
+        }
+        if(carrinhoDeCompras["Batata Frita-Grande"].quantidade > 0){
+    
+            batatagrande = "Batata Frita-Grande";
+            document.getElementById("batatagrande").innerText = batatagrande;
+            console.log(batatagrande);
+
+            valorbatatagrande = carrinhoDeCompras["Batata Frita-Grande"].quantidade * carrinhoDeCompras["Batata Frita-Grande"].valor ;
+            document.getElementById("valorbatatagrande").innerText = valorbatatagrande;
+            console.log(valorbatatagrande);
+
+            
+
+        }
+
+
         if(carrinhoDeCompras["Refrigerante"].quantidade > 0){
     
             refrigerante = "Refrigerante";
@@ -184,3 +222,37 @@ function adicionaDoubleChiquem(item){
 
 }
 */
+document.getElementById("frmRadio").onsubmit = function () {
+    let frm = document.getElementById('frmRadio').elements;
+    let resultado = "";
+    for (i = 0; i < frm.length; i++) {
+        if (frm[i].checked) {;
+            resultado = frm[i].value
+            
+        }
+    }
+    document.getElementById("resultado").innerHTML = resultado;
+
+    if (resultado == 'Batata Frita-Pequena' ){
+        adicionaItem('Batata Frita-Pequena');
+    }
+    if (resultado == 'Batata Frita-Media' ){
+        adicionaItem('Batata Frita-Media');
+    }
+    if (resultado == 'Batata Frita-Grande' ){
+        adicionaItem('Batata Frita-Grande');
+    }
+    return false;
+ };
+
+
+ function change0(){
+    document.getElementById("preçoo").innerHTML = 'R$ 7,00';
+}
+function change1(){
+    document.getElementById("preçoo").innerHTML = 'R$ 10,00';
+}
+function change2(){
+    document.getElementById("preçoo").innerHTML = 'R$ 15,00';
+}
+

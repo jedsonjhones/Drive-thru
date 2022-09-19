@@ -74,24 +74,37 @@
 
             </div>
 
-            <div class="titulo4"> BATATA FRITA </div>
+            
 
             </div>
-            <div class="preço4">R$ 18,00</div>
+            <div id="preçoo" class="preço4">R$ 18,00</div>
     
             <button  class="favorite styled carrinho4 fonte-carrinho4"  type="button"  onclick="adicionaItem('Batata Frita');">ADICIONAR AO CARRINHO</button>
-  
+            
         
-            <div class="descriçao4 lista">
-                <label for="Pequena">Pequena </label><br />
-                <label for="Média">Média</label><br />
-                <label for="Grande">Grande</label>
-            </div>
 
-            <div class="circulo1"><input type="radio" name="bata" id="Pequena" checked="checked" /></div>
-            <div class="circulo2"><input type="radio" name="bata" id="Média" /></div>
-            <div class="circulo3"><input type="radio" name="bata" id="Grande" /></div>
-
+            
+            <form id="frmRadio">
+                <div>
+                    <div class="descriçao4 lista">
+                        <label for="Pequena">Pequena </label><br />
+                        <label for="Média">Média</label><br />
+                        <label for="Grande">Grande</label>
+                    </div>
+        
+                    <div class="circulo1"><input type="radio" name="bata" id="tamanho" checked="checked" value="Batata Frita-Pequena" onclick="change0()"; /></div>
+                    <div class="circulo2"><input type="radio" name="bata" id="tamanho" checked="checked" value="Batata Frita-Media" onclick="change1()"; /></div>
+                    <div class="circulo3"><input type="radio" name="bata" id="tamanho" checked="checked" value="Batata Frita-Grande" onclick="change2()"; /></div>
+                    
+                </div>
+                <button class="favorite styled carrinho4 fonte-carrinho4"  type="submit" >ADICIONAR AO CARRINHO </button>
+        </form>
+        
+        <div id="resultado" class="titulo4"> 
+            BATATA FRITA
+        </div>
+    
+        
 
 
             <div class="bebidas">
@@ -206,6 +219,8 @@
                  <div class="around" id="milk" ></div>
                  <div class="around" id="energe" ></div>
                  <div class="around" id="agua" ></div>
+                 <div class="around" id="batatamedia" ></div>
+                 <div class="around" id="batatagrande" ></div>
 
                  
                  
@@ -224,12 +239,14 @@
                 <div class="around2 " id="valormilk"></div>
                 <div class="around2" id="valorenerge"></div>
                 <div class="around2" id="valoragua"></div>
+                <div class="around2" id="valorbatatamedia"></div>
+                <div class="around2" id="valorbatatagrande"></div>
             </div>
             <span class="bloco-carrinho3" ></span>
             <span class="listagem">LISTAGEM</span>
             <span class="quant">QNTD</span>
             <span class="val">VALOR</span>
-            <span class="botao-finalizar"></span>
+            <span class="botao-finalizar">p</span>
             <span class="finalizar">Finalizar Compra</span>
             <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img">
             <span class="total">Total do pedido: </span>
