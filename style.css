@@ -1132,7 +1132,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.carrinho1:hover,.img-voltar:hover, .voltar:hover, .carrinho-img:hover, .carrinho:hover, .carrinho3:hover, .carrinho2:hover, .carrinho4:hover, .carrinho5:hover, .carrinho6:hover, .carrinho7:hover, .carrinho8:hover {
+.carrinho1:hover,.botao-finalizar:hover, .img-voltar:hover, .voltar:hover, .carrinho-img:hover, .carrinho:hover, .carrinho3:hover, .carrinho2:hover, .carrinho4:hover, .carrinho5:hover, .carrinho6:hover, .carrinho7:hover, .carrinho8:hover {
     background-color: #ffd82a;
 }
 
@@ -1284,15 +1284,8 @@ display: flex;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     z-index: 0;
-}
-.finalizar{
-    position: absolute;
 
-height: 89px;
-left: 980px;
-top: 633px;
-
-font-family: 'Candal';
+    font-family: 'Candal';
 font-style: normal;
 font-weight: 400;
 font-size: 25px;
@@ -1301,7 +1294,19 @@ display: flex;
 align-items: center;
 
 color: #FFFFFF;
-z-index: 1;
+}
+.finalizar{
+font-family: 'Candal';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 32px;
+display: flex;
+
+
+color: #FFFFFF;
+
+
 }
 .finalizar-img{
     position: absolute;
