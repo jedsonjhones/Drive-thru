@@ -5,57 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Candal" />
-    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+
     <title>Carrinho</title>
 </head>
 
 <body>
-    <script src="/js.js"></script>
-
-        <div id="popup-carrinho" class="popup-carrinho">
-            <img src="img/carrinho2.png" alt="imagen ilustrativa" class="carrinho-img2">
-            <span class="bloco-carrinho">  </span>
-            <span class="bloco-carrinho1">Teste 1</span>
-            <span class="bloco-carrinho2">
-          
-
-            </span>
-            <span class="bloco-carrinho3">teste 3</span>
-            <span class="botao-finalizar">Fechar</span>
-            <span class="finalizar">Finalizar Compra</span>
-            <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img">
-            <span class="total">Total do pedido: </span>
-       
-            <span class="L1" > <li id="doublechiquem">Milk-Shake - 500ml - Morango</li> </span>
-            <span class="L2" > <li>Milk-Shake - 500ml - Morango</li> </span>
-            
-            
-
-            <a href="/index.html">
-                <button type="button" class="voltar">
-                    <img src="img/voltar.png" alt="imagem ilustrativa" class="img-voltar">
-                </button>
-            </a>
-
-
-           
-            <span class="volta" >VOLTAR</span>
-            <span class="totalpedido"></span>
-            <span class="L1-1 " >- 1 +</span>
-
-
-
-
-
-
+  
+    <form id="frmRadio">
+        <div>
+            <label for="cores">Branco</label>
+            <input type="radio" id="cores" name="cores" value="branco">
         </div>
-
-
-        </script>
-        
-
+        <div>
+            <label for="cores">Verde</label>
+            <input type="radio" id="cores" name="cores" value="verde">
+        </div>
+        <input type="submit" value="Exibir resultado">
+</form>
+<p id="resultado"></p>
+<script>
+        document.getElementById("frmRadio").onsubmit = function () {
+            let frm = document.getElementById('frmRadio').elements;
+            let resultado = "";
+            for (i = 0; i < frm.length; i++) {
+                if (frm[i].checked) {;
+                    resultado = frm[i].value
+                }
+            }
+            document.getElementById("resultado").innerHTML = "A cor selecionada é: " + resultado;
+            return false;
+         };
+</script>
 
 
 </body>

@@ -7,6 +7,9 @@ function fechar(){
 
 
 }
+function Evento(){
+    alert('evento funcionando')
+}
 const carrinhoDeCompras  = {
     "Double Chicken": {
         "quantidade": 0,
