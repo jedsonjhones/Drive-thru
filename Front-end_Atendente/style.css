@@ -1,0 +1,18 @@
+
+.bg-mynav {
+    background-color:  #FF0000 ;
+    
+  }
+
+  
+  body {
+    font-size: 1.25rem;
+    position: relative;
+    width: 1366px;
+    height: 1777px;
+    background: linear-gradient(59.8deg, rgba(239, 181, 28, 0.96) 20.21%, rgba(248, 237, 219, 0.663783) 55.39%, #FF0000 85.78%);
+  }
+  td {
+      line-height: 3rem;
+  }
+

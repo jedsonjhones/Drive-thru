@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Tela do atendente</title>
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-dark bg-mynav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><h1>Atendente</h1></a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <div><h1 style="color: #3e4247">Pedidos</h1></div>
+      </div>
+      
+      <div class="table-responsive">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Numero do pedido</th>
+              <th scope="col">Itens do pedido</th>
+              <th scope="col">Valor total</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="mytable">
+            <tr>
+              <th scope="row" colspan="5">Loading...</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js.js"></script>
+   
+  </body>
+</html>
