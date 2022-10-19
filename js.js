@@ -91,6 +91,9 @@ valorvegan = 0;
 valorpicanha = 0;
 valordoublechiquem = 0;
 let pedidocompleto = " ";
+var aux = false;
+
+
 
 function loadTable(data) {
       
@@ -110,50 +113,106 @@ function loadTable(data) {
   }
 
 
+function atualizaTabela(){
+    
+    const pedidos = JSON.stringify({
+        "itens": pedidocompleto,
+        "valor": valortot
+      });
+
+    loadTable(pedidos);
+    aux = true;
+    pedidocompleto = " ";
+    atualizaCarrinho(" ", " ");
+    valortot =  0;
+}
+
+function atualizaCarrinho(idPedido, idValor){
+    if (idPedido == doublechiquem){
+        document.getElementById("doublechiquem").innerText = idPedido;
+        document.getElementById("valordoublechiquem").innerText = idValor;
+
+    }
+    if (idPedido == picanhaespecial){
+        document.getElementById("picanhaespecial").innerText = idPedido;
+        document.getElementById("valorpicanha").innerText = idValor;
+
+    }
+    if (idPedido == doublevegan){
+        document.getElementById("doublevegan").innerText = idPedido;
+        document.getElementById("valorvegan").innerText = idValor;
+
+    }
+    if (idPedido == " " || idValor == " "){
+        document.getElementById("doublechiquem").innerText = " ";
+        document.getElementById("picanhaespecial").innerText = " ";
+        document.getElementById("doublevegan").innerText = " ";
+
+        valorvegan = 0;
+        valorpicanha = 0;
+        valordoublechiquem = 0;
+
+        document.getElementById("valordoublechiquem").innerText = " ";
+        document.getElementById("valorpicanha").innerText = " ";
+        document.getElementById("valorvegan").innerText = " ";
+
+        valortot =  0;
+        document.getElementById("valortot").innerText = " ";
+
+        totalDeItens = 0;
+
+        document.getElementById("totalDeItens").innerText = 0;
+        
+    }
+}
+
 function adicionaItem(item){
 
-        const pedido = JSON.stringify({
-        "itens": item,
-        "valor": carrinhoDeCompras[item].valor
-      });
-    
-
-     
-
+    if ( aux == true){
+        
+        valorvegan = 0;
+        valorpicanha = 0;
+        valordoublechiquem = 0;
+        aux = false;
+        valortot =  0;
+        carrinhoDeCompras[item].quantidade = 0;
+    }
     carrinhoDeCompras[item].quantidade += 1;
     totalDeItens += 1;
     document.getElementById("totalDeItens").innerText = totalDeItens;
     console.log(carrinhoDeCompras);
-    if(carrinhoDeCompras["Double Chicken"].quantidade > 0){
+    if(carrinhoDeCompras["Double Chicken"].quantidade > 0 && item == "Double Chicken"){
 
-        loadTable(pedido);
         doublechiquem = "  Double Chicken";
-        document.getElementById("doublechiquem").innerText = doublechiquem;
+        pedidocompleto += doublechiquem+", ";
         console.log(doublechiquem);
 
         valordoublechiquem = carrinhoDeCompras["Double Chicken"].quantidade * carrinhoDeCompras["Double Chicken"].valor ;
-        document.getElementById("valordoublechiquem").innerText = valordoublechiquem;
+        atualizaCarrinho(doublechiquem,valordoublechiquem);
+
         console.log(valordoublechiquem);
     }
 
-    else if(carrinhoDeCompras["Picanha Especial"].quantidade > 0){
-            loadTable(pedido);
+    if(carrinhoDeCompras["Picanha Especial"].quantidade > 0 && item == "Picanha Especial"){
             picanhaespecial = "Picanha Especial";
-            document.getElementById("picanhaespecial").innerText = picanhaespecial;
+            pedidocompleto += picanhaespecial+", ";
+
             console.log(picanhaespecial);
 
             valorpicanha = carrinhoDeCompras["Picanha Especial"].quantidade * carrinhoDeCompras["Picanha Especial"].valor ;
-            document.getElementById("valorpicanha").innerText = valorpicanha;
+            atualizaCarrinho(picanhaespecial,valorpicanha);
             console.log(valorpicanha);
         }
-        else if(carrinhoDeCompras["Double vegan"].quantidade > 0){
-            loadTable(pedido);
+    if(carrinhoDeCompras["Double vegan"].quantidade > 0 && item == "Double vegan"){
             doublevegan = "Double vegan";
-            document.getElementById("doublevegan").innerText = doublevegan;
+            pedidocompleto += doublevegan+", ";
+           // atualizaCarrinho(doublevegan);
             console.log(doublevegan);
 
             valorvegan = carrinhoDeCompras["Double vegan"].quantidade * carrinhoDeCompras["Double vegan"].valor ;
-            document.getElementById("valorvegan").innerText = valorvegan;
+            atualizaCarrinho(doublevegan,valorvegan);
+
+            //document.getElementById("valorvegan").innerText = valorvegan;
             console.log(valorvegan);
         }
         else if(carrinhoDeCompras["Batata Frita-Pequena"].quantidade > 0){

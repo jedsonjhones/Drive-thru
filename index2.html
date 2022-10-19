@@ -250,19 +250,18 @@
             <div class="toti">R$</div>
             <div class="tot" id="valortot">0</div>
        
-         
-            <a href="javascript: fechar()"><button type="button" class="botao-finalizar">
-              
-                 <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img"> 
-<p class="finalizar">FINALIZAR COMPRA</p>
+
+            <a href="javascript: fechar()">
                 
-                   
-                 </button>
-                 <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img">
-                 
-                </a>            
+                <input type="button" class="botao-finalizar" onclick="atualizaTabela();">
+                <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img" onclick="atualizaTabela();">   
+                <p class="finalizar" onclick="atualizaTabela();">FINALIZAR COMPRA</p> 
+                </input>
+
+            </a>            
             
-            
+          
+
             <a href="javascript: abrir()"><button type="button" class="carrinho"><img src="img/carrinho.png" alt="imagen ilustrativa" class="carrinho-img">
 
             </button>
