@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cardapiostyle.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Candal" />
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <title>Drive-Thru</title>
+</head>
+
+<body>
+  
+
+    <head>
+        
+            <a href="javascript: abrir()"><button type="button" class="carrinho"><img src="img/carrinho.png" alt="imagen ilustrativa" class="carrinho-img">
+
+            </button>
+            </a>
+        
+   
+        <img src="img/frase-cardapio.png" alt="imagen ilustrativa" class="cardapio">
+        <p class="meu-carrinho">meu carrinho</p>
+<div class="bol"></div>
+        <div class="bol2" id="totalDeItens">0</div>
+        
+        <div class="comidas"> Comidas</div>
+        </header>
+
+        <section>
+
+            <div class="bloco1">
+                <img src="img/ham.jpg" alt="Foto da comida" class="img-comida1">
+                <p class="titulo1">DOUBLE CHICKEN</p>
+                <p class="descriçao1"> Filé de frango 2x, cheddar 2x, cebola agridoce, molho especial e pão de
+                    milho.</p>
+                <p class="preço1">R$ 20,00</p>
+
+
+
+
+            </div>
+            <button  class="carrinho1 fonte-carrinho"  type="button" onclick="adicionaItem('Double Chicken');">ADICIONAR AO CARRINHO</button>
+           
+
+
+
+
+
+            <div class="bloco2">
+                <img src="img/ham2.png" alt="Foto da comida" class="img-comida1">
+
+
+            </div>
+            <div class="titulo2"> PICANHA ESPECIAL </div>
+            <p class="descriçao2"> Picanha, cebola, cheddar, salada, bacon e pão de queijo. </p>
+            <div class="preço2">R$ 22,00</div>
+            <button  class="favorite styled carrinho2 fonte-carrinho2"  type="button" onclick="adicionaItem('Picanha Especial');">ADICIONAR AO CARRINHO</button>
+
+            <div class="bloco3">
+                <img src="img/ham3.png" alt="Foto da comida" class="img-comida1">
+            </div>
+            <div class="titulo3"> DOUBLE VEGAN </div>
+            <p class="descriçao3"> Hamburguer de feijão, salada, cheddar sem leite, molho especial e pão de batata. </p>
+            <div class="preço3">R$ 18,00</div>
+            <button  class="favorite styled carrinho3 fonte-carrinho3"  type="button"  onclick="adicionaItem('Double vegan');">ADICIONAR AO CARRINHO</button>
+
+
+            <div class="bloco4">
+                <img src="img/batata.png" alt="Foto da comida" class="img-comida1">
+
+            </div>
+
+            
+
+            </div>
+            <div id="preçoo" class="preço4">R$ 18,00</div>
+    
+            <button  class="favorite styled carrinho4 fonte-carrinho4"  type="button"  onclick="adicionaItem('Batata Frita');">ADICIONAR AO CARRINHO</button>
+            
+        
+
+            
+            <form id="frmRadio">
+                <div>
+                    <div class="descriçao4 lista">
+                        <label for="Pequena">Pequena </label><br />
+                        <label for="Média">Média</label><br />
+                        <label for="Grande">Grande</label>
+                    </div>
+        
+                    <div class="circulo1"><input type="radio" name="bata" id="tamanho" checked="checked" value="Batata Frita-Pequena" onclick="change0()"; /></div>
+                    <div class="circulo2"><input type="radio" name="bata" id="tamanho" checked="checked" value="Batata Frita-Media" onclick="change1()"; /></div>
+                    <div class="circulo3"><input type="radio" name="bata" id="tamanho" checked="checked" value="Batata Frita-Grande" onclick="change2()"; /></div>
+                    
+                </div>
+                <button class="favorite styled carrinho4 fonte-carrinho4"  type="submit" >ADICIONAR AO CARRINHO </button>
+        </form>
+        
+        <div id="resultado" class="titulo4"> 
+            BATATA FRITA
+        </div>
+    
+        
+
+
+            <div class="bebidas">
+                <p>Bebidas</p>
+            </div>
+
+            <div class="bloco5">
+
+
+            </div>
+            <img src="img/refrigetante.png" alt="imagen ilustrativa" class="refrigerantepos">
+            <div class="titulo5">REFRIGERANTE</div>
+          
+            <button  class="favorite styled carrinho5 fonte-carrinho5"  type="button"  onclick="adicionaItem('Refrigerante');">ADICIONAR AO CARRINHO</button>
+
+
+
+            <div class="circulo1-2"></div>
+            <div class="circulo2-2"></div>
+            <div class="circulo3-2"></div>
+            <div class="circulo4-2"></div>
+            <div class="preço5">R$ 9,00</div>
+
+            <div class="descriçao5 lista">
+                <label for="Coca-Cola">Coca-Cola </label><br />
+                <label for="Sprite">Sprite</label><br />
+                <label for="Guaraná Kuat">Oreo</label> <br>
+                <label for="Pepsi">Pepsi</label>
+            </div>
+            <div class="circulo1-2"><input type="radio" name="refrige" id="Coca-Cola" checked="checked" /></div>
+            <div class="circulo2-2"><input type="radio" name="refrige" id="CSprite" /></div>
+            <div class="circulo3-2"><input type="radio" name="refrige" id="Guaraná Kuat" /></div>
+            <div class="circulo4-2"><input type="radio" name="refrige" id="Pepsi " /></div>
+
+
+            <div class="bloco6">
+
+
+            </div>
+            <img src="img/milk.png" alt="imagen ilustrativa" class="img-milk">
+            <div class="titulo6">MILK-SHAKE</div>
+            <button  class="favorite styled carrinho6 fonte-carrinho6"  type="button"  onclick="adicionaItem('Milkshake');">ADICIONAR AO CARRINHO</button>
+
+
+
+            <div class="preço6">R$ 11,00</div>
+            <div class="descriçao6 lista">
+                <label for="Morango">Morango </label><br />
+                <label for="Chocolate">Chocolate</label><br />
+                <label for="Oreo">Oreo</label> <br>
+                <label for="Ovo maltime">Ovo maltime</label>
+            </div>
+            <div class="circulo1-3"><input type="radio" name="milk" id="Morango" checked="checked" /></div>
+            <div class="circulo2-3"><input type="radio" name="milk" id="Chocolate" /></div>
+            <div class="circulo3-3"><input type="radio" name="milk" id="Oreo" /></div>
+            <div class="circulo4-3"><input type="radio" name="milk" id="Ovo maltime " /></div>
+
+            <div class="bloco7">
+
+
+            </div>
+            <img src="img/energetico.png" alt="imagen ilustrativa" class="img-energ">
+            <div class="titulo7">ENERGETICO</div>
+            <button  class="favorite styled carrinho7 fonte-carrinho7"  type="button"  onclick="adicionaItem('Energetico');">ADICIONAR AO CARRINHO</button>
+
+            <div class="descriçao7 lista">
+                <label for="Red Bull">Red Bull </label><br />
+                <label for="Fusion">Fusion</label><br />
+                <label for="Monster">Monster</label>
+            </div>
+
+
+            <div class="preço7">R$ 11,00</div>
+
+            <div class="circulo1-4"><input type="radio" name="ener" id="Red Bull" checked="checked" /></div>
+            <div class="circulo2-4"><input type="radio" name="ener" id="Fusion" /></div>
+            <div class="circulo3-4"><input type="radio" name="ener" id="Monster" /></div>
+
+
+
+
+            <div class="bloco8">
+
+
+            </div>
+            <img src="img/agua.png" alt="imagen ilustrativa" class="img-agua">
+            <div class="titulo8">Água Mineral</div>
+            <button  class="favorite styled carrinho8 fonte-carrinho8"  type="button"  onclick="adicionaItem('Agua');">ADICIONAR AO CARRINHO</button>
+
+            <div class="descriçao8 lista">
+                <label for="Indaiá">Indaiá </label>
+                <label for="Crystal">Crystal</label>
+            </div>
+            <div class="circulo1-5"><input type="radio" name="refri" id="Indaiá" checked="checked" /><br /></div>
+            <div class="circulo2-5"><input type="radio" name="refri" id="Crystal" /></div>
+
+
+
+            <div class="preço8">R$ 30,00</div>
+
+
+        </section>
+       
+        <div id="popup-carrinho" class="popup-carrinho">
+            <img src="img/carrinho2.png" alt="imagen ilustrativa" class="carrinho-img2">
+            <div class="bloco-carrinho direction" > 
+                 <div class="around" id="doublechiquem"></div>
+                 <div class="around" id="picanhaespecial"></div>
+                 <div class="around" id="doublevegan" ></div>
+                 <div class="around" id="batatafrita" ></div>
+                 <div class="around" id="refrigerante" ></div>
+                 <div class="around" id="milk" ></div>
+                 <div class="around" id="energe" ></div>
+                 <div class="around" id="agua" ></div>
+                 <div class="around" id="batatamedia" ></div>
+                 <div class="around" id="batatagrande" ></div>
+
+                 
+                 
+            </div>
+
+
+
+
+            <span class="bloco-carrinho1"></span>
+            <div class="bloco-carrinho2 direction">
+                <div class="around2" id="valordoublechiquem"></div> 
+                <div class="around2" id="valorpicanha"></div>
+                <div class="around2" id="valorvegan"></div>
+                <div class="around2" id="valorbatata"></div>
+                <div class="around2" id="valorrefri"></div>
+                <div class="around2 " id="valormilk"></div>
+                <div class="around2" id="valorenerge"></div>
+                <div class="around2" id="valoragua"></div>
+                <div class="around2" id="valorbatatamedia"></div>
+                <div class="around2" id="valorbatatagrande"></div>
+            </div>
+            <span class="bloco-carrinho3" ></span>
+            <span class="listagem">LISTAGEM</span>
+            <span class="quant">QNTD</span>
+            <span class="val">VALOR</span>
+            <span class="total">Total do pedido: </span>
+            <div class="toti">R$</div>
+            <div class="tot" id="valortot">0</div>
+       
+         
+            <a href="javascript: fechar()"><button type="button" class="botao-finalizar">
+              
+                 <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img"> 
+<p class="finalizar">FINALIZAR COMPRA</p>
+                
+                   
+                 </button>
+                 <img src="img/finalizar.png" alt="imagen ilustrativa" class="finalizar-img">
+                 
+                </a>            
+            
+            
+            <a href="javascript: abrir()"><button type="button" class="carrinho"><img src="img/carrinho.png" alt="imagen ilustrativa" class="carrinho-img">
+
+            </button>
+            </a>
+            <a href="javascript: fechar()"><button type="button" class="voltar"><img src="img/voltar.png" alt="imagen ilustrativa" class="img-voltar">
+
+            </button>
+            </a>
+        
+
+
+           
+            
+            <span class="totalpedido"></span>
+            <span class="L1-1 " >- 1 +</span>
+
+
+
+
+
+
+        </div>
+        <script src="js.js"></script>
+        
+        
+
+
+
+</body>
+
+</html>
