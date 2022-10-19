@@ -1,7 +1,7 @@
 
 function loadTable() {
   const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "dados.json");
+  xhttp.open("GET", "http://localhost:3000/produtos");
   xhttp.send();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
