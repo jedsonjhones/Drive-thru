@@ -1289,20 +1289,20 @@ display: flex;
 .finalizar{
     position: absolute;
 
-height: 89px;
-left: 980px;
-top: 633px;
+    height: 89px;
+    left: 980px;
+    top: 610px;
 
-font-family: 'Candal';
-font-style: normal;
-font-weight: 400;
-font-size: 25px;
-line-height: 32px;
-display: flex;
-align-items: center;
+    font-family: 'Candal';  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
 
-color: #FFFFFF;
-z-index: 1;
+    color: #FFFFFF;
+    z-index: 1;
 }
 .finalizar-img{
     position: absolute;
